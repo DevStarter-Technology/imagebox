@@ -1,0 +1,18 @@
+<h1>ImageBox</h1>
+
+<h2>Gallery #1</h2>
+<img class="imagebox-thumbnail" src="img/thumb/img1.png" data-full="img/fullsize/img1.png" data-type="image" data-caption="Image description" data-gallery="gallery1">
+<img class="imagebox-thumbnail" src="img/thumb/img2.png" data-full="img/fullsize/img2.png" data-type="image" data-caption="Image description 2" data-gallery="gallery1">
+<img class="imagebox-thumbnail" src="img/thumb/img3.png" data-full="img/fullsize/img3.png" data-type="image" data-caption="Image description 3" data-gallery="gallery1">
+
+<h2>Gallery #2</h2>
+<img class="imagebox-thumbnail" src="img/thumb/img4.png" data-full="img/fullsize/img4.png" data-caption="First" data-gallery="gallery2">
+<img class="imagebox-thumbnail" src="img/thumb/img5.png" data-full="img/fullsize/img5.png" data-caption="Second" data-gallery="gallery2">
+<img class="imagebox-thumbnail" src="img/thumb/img6.png" data-full="img/fullsize/img6.png" data-caption="Another" data-gallery="gallery2">
+
+<link rel="stylesheet" href="../dist/css/imagebox.min.css">
+<script type="text/javascript" src="../dist/js/imagebox.min.js"></script>
+<script type="text/javascript">
+  ImageBox.init({ gallery: 'gallery1' });
+  ImageBox.init({ gallery: 'gallery2' });
+</script>

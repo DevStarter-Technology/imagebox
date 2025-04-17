@@ -1,0 +1,147 @@
+.imagebox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 999999;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  &.show {
+    opacity: 1;
+  }
+
+  img {
+    max-height: 80vh;
+    max-width: 80vw;
+    transition: all 0.3s ease;
+  }
+
+  &-content {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    max-width: 90%;
+  }
+
+  &-image-container {
+    position: relative;
+    max-width: 80vw;
+    max-height: 80vh;
+  }
+
+  &-media {
+    max-width: 90vw;
+    max-height: 80vh;
+    transition: transform 0.3s;
+
+    &.zoomed {
+      transform: scale(1.5);
+      cursor: grab;
+    }
+  }
+
+  &-thumbnail {
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 15px;
+    aspect-ratio: 1/1;
+    max-width: 200px;
+    margin: 10px;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &.active {
+      opacity: 1;
+      border: 2px solid white;
+    }
+  }
+
+  &-thumbnails {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+    overflow-x: auto;
+    padding: 10px;
+  }
+}
+
+.thumbnails-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.caption {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.close-btn,
+.nav-btn {
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  position: absolute;
+  z-index: 1001;
+}
+
+.close-btn {
+  top: 1rem;
+  right: 1rem;
+}
+
+.nav-btn {
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+
+  &.prev-btn {
+    left: 1rem;
+  }
+
+  &.next-btn {
+    right: 1rem;
+  }
+}
+
+.fullscreen-btn {
+  position: absolute;
+  top: 20px;
+  right: 70px;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; // 16:9 aspect ratio
+  width: 80vw;
+  max-width: 1000px;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

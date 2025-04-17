@@ -1,0 +1,23 @@
+{
+  "name": "@devstarter/imagebox",
+  "version": "0.0.1",
+  "description": "A modern lightbox gallery with plugin architecture and lazy-loading modules.",
+  "main": "dist/imagebox.min.js",
+  "scripts": {
+    "build:css": "node scripts/build-css.js",
+    "build:js": "node scripts/build-js.js",
+    "build:scss": "node scripts/copy-scss.js",
+    "build": "npm run build:css && npm run build:js && npm run build:scss",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["lightbox", "gallery", "imagebox", "plugin", "modular", "lazyload"],
+  "author": "DevStarter",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.2",
+    "sass": "^1.86.3"
+  }
+}
